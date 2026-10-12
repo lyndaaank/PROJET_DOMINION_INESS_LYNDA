@@ -12,7 +12,7 @@ private :
 public :
     CarteMalediction(int points, std :: string nom, int cout, std :: string type);
     int getPoints()const;
-    ~CarteVictoire();
+    ~CarteMalediction();
 };
 
 #endif
