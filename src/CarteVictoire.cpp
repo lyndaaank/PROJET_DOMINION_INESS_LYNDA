@@ -12,7 +12,7 @@ int CarteVictoire :: getPoints()const{
     return m_Points;
 }
 
-int CarteVictoire :: calculerPoints(const Joueur& joueur)const{
+int CarteVictoire :: calculerPoints(const Joueur& /*joueur*/)const{
     return m_Points;
 }
 
