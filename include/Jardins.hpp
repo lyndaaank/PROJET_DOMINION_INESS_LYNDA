@@ -8,7 +8,7 @@ class Jardins : public CarteVictoire{
 
 public :
     Jardins();
-    void calculerPoints(const Joueur& joueur)const override;
+    int calculerPoints(const Joueur& joueur)const override;
     ~Jardins();
 };
 
