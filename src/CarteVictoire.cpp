@@ -3,9 +3,8 @@
 
 
 CarteVictoire:: CarteVictoire(int points, std :: string nom, int cout, std :: string type)
-    : m_Points(points)
+    : Carte(nom, cout, type), m_Points(points)
 {
-    Carte(nom, cout, type);
     std :: cout << "Creation Carte Victoire"<< this << std :: endl;
 }
 
