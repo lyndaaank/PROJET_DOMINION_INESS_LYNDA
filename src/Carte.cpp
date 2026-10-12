@@ -8,7 +8,17 @@ Carte :: Carte (std ::string nom, int cout , std :: string type)
 
 }
 
+std::string Carte::getNom() const {
+    return m_Nom;
+}
 
+int Carte::getCout() const {
+    return m_Cout;
+}
+
+std::string Carte::getType() const {
+    return m_Type;
+}
 
 Carte :: ~Carte(){
     std :: cout << "Destruction Carte " << this << std :: endl;
