@@ -10,7 +10,7 @@ private :
     int m_Points;
 
 public :
-    virtual int calculerPoints(const &Joueur joueur) const; 
+    virtual int calculerPoints(const Joueur& joueur) const; 
     CarteVictoire(int points, std :: string nom, int cout, std :: string type);
     int getPoints()const;
     ~CarteVictoire();
