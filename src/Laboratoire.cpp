@@ -7,5 +7,6 @@ Laboratoire::Laboratoire()
 
 void Laboratoire::appliquerEffet(Joueur&/* joueur*/, Partie&/* partie*/)
 {
-    // Effet à implémenter plus tard
+    // joueur.piocher(2);
+    //joueur.ajouterActions(1);
 }
