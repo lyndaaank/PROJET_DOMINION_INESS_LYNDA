@@ -4,6 +4,8 @@
 #include <string>
 #include "Carte.hpp"
 
+class Joueur;
+
 class CarteVictoire : public Carte{
 
 private :
