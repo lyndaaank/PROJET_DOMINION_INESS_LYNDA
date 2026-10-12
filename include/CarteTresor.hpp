@@ -11,7 +11,7 @@ private :
 
 public :
     virtual int calculerPoints(const &Joueur joueur) const; 
-    CarteVictoire(int tresors, std :: string nom, int cout, std :: string type);
+    CarteTresor(int tresors, std :: string nom, int cout, std :: string type);
     int getValeur()const;
     ~CarteTresor();
 };
