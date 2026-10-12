@@ -13,7 +13,7 @@ private :
 
 public :
     virtual int calculerPoints(const Joueur& joueur) const; 
-    CarteVictoire(int points, std :: string nom, int cout, std :: string type);
+    CarteVictoire(int points, const std::string& nom, int cout);
     int getPoints()const;
     ~CarteVictoire();
 };

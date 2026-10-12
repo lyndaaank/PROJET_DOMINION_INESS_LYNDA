@@ -8,7 +8,7 @@ class Sorciere : public CarteAction{
 
 public :
     Sorciere();
-    void appliquerEffet(Partie& partie, Joueur& joueur) override;
+    void appliquerEffet(Joueur& joueur, Partie& partie) override;
     ~Sorciere();
 };
 

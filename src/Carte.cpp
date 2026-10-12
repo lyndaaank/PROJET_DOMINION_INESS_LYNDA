@@ -1,25 +1,65 @@
 #include "Carte.hpp"
 #include <iostream>
 
-Carte :: Carte (std ::string nom, int cout , std :: string type)
-    : m_Nom(nom), m_Cout(cout), m_Type(type)
+
+Carte::Carte(const std::string& nom, int cout, TypeCarte type)
+    : m_nom(nom), m_cout(cout), m_type(type)
 {
-    std :: cout << "Construction Carte " << this << std :: endl;
-
 }
 
-std::string Carte::getNom() const {
-    return m_Nom;
+
+Carte::~Carte()
+{
 }
 
-int Carte::getCout() const {
-    return m_Cout;
+
+void Carte::afficher() const
+{
+    std::cout << "Nom : " << m_nom << std::endl;
+    std::cout << "Cout : " << m_cout << std::endl;
+    std::cout << "Type : ";
+
+    switch (m_type)
+    {
+        case TRESOR:
+            std::cout << "Tresor";
+            break;
+
+        case VICTOIRE:
+            std::cout << "Victoire";
+            break;
+
+        case MALEDICTION:
+            std::cout << "Malediction";
+            break;
+
+        case ACTION:
+            std::cout << "Action";
+            break;
+    }
+
+    std::cout << std::endl;
 }
 
-std::string Carte::getType() const {
-    return m_Type;
+
+std::string Carte::getNom() const
+{
+    return m_nom;
 }
 
-Carte :: ~Carte(){
-    std :: cout << "Destruction Carte " << this << std :: endl;
+
+int Carte::getCout() const
+{
+    return m_cout;
 }
+
+
+TypeCarte Carte::getType() const
+{
+    return m_type;
+}
+
+
+
+
+

@@ -1,23 +1,39 @@
-#ifndef __CARTE__H
-#define __CARTE__H
+#ifndef CARTE_HPP
+#define CARTE_HPP
 
-#include <string>
+#include<iostream>
+#include<string>
+#include<vector>
 
-class Carte {
+class Joueur;
+class Partie;
 
-private :
-    std :: string m_Nom;
-    int m_Cout;
-    std :: string m_Type;
-public : 
-    Carte(std :: string nom, int cout , std :: string type);
-
-    std :: string getNom() const;
-    int getCout() const;
-    std :: string getType() const;
-
-    ~Carte();
-
+enum TypeCarte {
+    TRESOR,
+    VICTOIRE,
+    MALEDICTION,
+    ACTION
 
 };
-#endif 
+
+
+class Carte{
+
+private: 
+
+    std::string m_nom;
+    int m_cout;
+    TypeCarte m_type;
+    
+public: 
+
+    Carte(const std::string& nom, int cout, TypeCarte type);
+    virtual ~Carte(); //destructeur necessaire ici 
+    void afficher() const;
+    std::string getNom() const;
+    int getCout() const;
+    TypeCarte getType() const;
+    
+};
+
+#endif

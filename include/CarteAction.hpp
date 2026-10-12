@@ -13,11 +13,12 @@ private :
     bool m_Reaction;
 
 public :
-    virtual void appliquerEffet(Partie& partie, Joueur& joueur) = 0;
-    CarteAction(bool attaque, bool reaction, std :: string nom, int cout, std :: string type);
+    virtual void appliquerEffet(Joueur& joueur, Partie& partie) = 0;
+    CarteAction(bool attaque, bool reaction,const std :: string& nom, int cout);
     bool getAttaque() const;
     bool getReaction() const;
     ~CarteAction();
 };
 
 #endif
+

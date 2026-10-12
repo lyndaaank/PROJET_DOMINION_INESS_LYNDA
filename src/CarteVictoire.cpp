@@ -2,10 +2,11 @@
 #include <iostream>
 
 
-CarteVictoire:: CarteVictoire(int points, std :: string nom, int cout, std :: string type)
-    : Carte(nom, cout, type), m_Points(points)
+
+
+CarteVictoire::CarteVictoire(int points, const std::string& nom, int cout)
+    : Carte(nom, cout, VICTOIRE), m_Points(points)
 {
-    std :: cout << "Creation Carte Victoire"<< this << std :: endl;
 }
 
 int CarteVictoire :: getPoints()const{
@@ -17,7 +18,7 @@ int CarteVictoire :: calculerPoints(const Joueur& /*joueur*/)const{
 }
 
 
-CarteVictoire :: ~CarteVictoire(){
-    std :: cout << "Destructino Carte Victoire"<< this << std :: endl;
+CarteVictoire :: ~CarteVictoire()
+{
 }
 

@@ -8,7 +8,7 @@ class Voleur : public CarteAction{
 
 public :
     Voleur();
-    void appliquerEffet(Partie& partie, Joueur& joueur) override;
+    void appliquerEffet(Joueur& joueur, Partie& partie) override;
     ~Voleur();
 };
 

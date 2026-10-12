@@ -10,7 +10,7 @@ private :
     int m_Points;
 
 public :
-    CarteMalediction(int points, std :: string nom, int cout, std :: string type);
+    CarteMalediction(int points, const std::string& nom, int cout);
     int getPoints()const;
     ~CarteMalediction();
 };

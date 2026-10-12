@@ -8,7 +8,7 @@ class Festin : public CarteAction{
 
 public :
     Festin();
-    void appliquerEffet(Partie& partie, Joueur& joueur) override;
+    void appliquerEffet(Joueur& joueur, Partie& partie) override;
     ~Festin();
 };
 

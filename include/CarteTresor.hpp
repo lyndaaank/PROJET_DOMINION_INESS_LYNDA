@@ -10,7 +10,7 @@ private :
     int m_Valeur;
 
 public :
-    CarteTresor(int tresors, std :: string nom, int cout, std :: string type);
+    CarteTresor(int tresors, const std::string& nom, int cout);
     int getValeur()const;
     ~CarteTresor();
 };
