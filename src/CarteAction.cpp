@@ -3,9 +3,8 @@
 
 
 CarteAction :: CarteAction(bool attaque , bool reaction, std :: string nom, int cout, std :: string type)
-    : m_Attaque(attaque), m_Reaction(reaction)
+    : Carte(nom, cout, type), m_Attaque(attaque), m_Reaction(reaction)
 {
-    Carte(nom, cout, type);
     std :: cout << "Creation Carte Action"<< this << std :: endl;
 }
 
