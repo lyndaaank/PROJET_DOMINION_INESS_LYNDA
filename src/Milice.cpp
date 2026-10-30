@@ -60,13 +60,13 @@ void Milice::appliquerEffet(Joueur& joueur, Partie& partie)
                     std::cout << un_joueur.getNomJoueur() << " , Choisissez une carte a mettre dans la defausse : \n";
                     numero = partie.verifSaisieNumero();
 
-                    Carte* carte = numero < 1 ? nullptr : un_joueur.getCarteMain(numero);
+                    carte = un_joueur.getCarteMain(numero);
 
                     while(carte == nullptr){
 
                         std::cout <<"Invalide. Tapez le numéro d'une carte presente dans votre main' : ";
                         numero = partie.verifSaisieNumero();
-                        carte = numero < 1 ? nullptr : un_joueur.getCarteMain(numero);
+                        carte = un_joueur.getCarteMain(numero);
                     }
 
                     un_joueur.defausser(carte);
