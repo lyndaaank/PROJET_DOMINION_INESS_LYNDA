@@ -60,7 +60,7 @@ void Milice::appliquerEffet(Joueur& joueur, Partie& partie)
                     std::cout << un_joueur.getNomJoueur() << " , Choisissez une carte a mettre dans la defausse : \n";
                     numero = partie.verifSaisieNumero();
 
-                    carte = un_joueur.getCarteMain(numero);
+                    Carte* carte = un_joueur.getCarteMain(numero);
 
                     while(carte == nullptr){
 
