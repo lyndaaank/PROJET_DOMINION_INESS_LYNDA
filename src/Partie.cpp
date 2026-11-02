@@ -8,6 +8,7 @@
 #include <limits>
 #include <sstream>
 #include <vector>
+#include<stdexcept>
 
 // Initialise les attributs de la partie.
 Partie::Partie()
