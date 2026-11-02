@@ -46,9 +46,6 @@ void Carte::appliquerEffet(Joueur& /*joueur*/, Partie& /*partie*/)
 }
 
 
-std::vector<std::string> Carte::getDescription()const{
-    return {};
-}
 
 
 std::string Carte::getLigne(const std::string texte) const{
