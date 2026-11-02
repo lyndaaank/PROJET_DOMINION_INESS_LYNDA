@@ -194,7 +194,7 @@ void Partie::initialiser(){
 
             int option = verifSaisieNumero();
 
-            if(option != 1 && option != 2){
+            while(option != 1 && option != 2){
                 std::cout << "Option invalide, tapez 1 ou 2.\n";
                 option = verifSaisieNumero();
             }
