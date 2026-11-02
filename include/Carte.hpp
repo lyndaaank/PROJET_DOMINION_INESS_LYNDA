@@ -39,7 +39,7 @@ public:
     std::string getLigne(const std::string texte) const; 
     std::vector<std::string> getAffichage(int numero) const;
 
-    virtual std::vector<std::string> getDescription() const;
+    virtual std::vector<std::string> getDescription() const = 0;
 
 };
 
