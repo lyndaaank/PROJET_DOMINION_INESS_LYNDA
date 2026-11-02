@@ -348,19 +348,22 @@ void Reserve::afficherCartesSelonCout(int prixMax) const{
 
         if(!pile.second.empty() && getCout(pile.first) <= prixMax){
 
-            std::string couleur = "\033[34m";
-            TypeCarte type = pile.second.back()->getType();
-            if(type == TRESOR) couleur = "\033[33m";
-            else if(type == VICTOIRE) couleur = "\033[32m";
-            else if(type == MALEDICTION) couleur = "\033[31m";
+                std::string couleur = "\033[96m";
 
-            std::cout << couleur << i << ") " << pile.first
-            << "\033[0m" << " | "
-            << couleur << "Prix : " << getCout(pile.first)
-            << "\033[0m" << " | "
-            << couleur << "Stock : " << pile.second.size()
-            << "\033[0m" << std::endl;
-        }
+                TypeCarte type = pile.second.back()->getType();
+
+                if(type == TRESOR)
+                    couleur = "\033[93m";
+                else if(type == VICTOIRE)
+                    couleur = "\033[92m";
+                else if(type == MALEDICTION)
+                    couleur = "\033[91m";
+
+                std::cout << couleur << i << ") " << pile.first
+                          << "\033[0m" << " | Prix : " << getCout(pile.first)
+                          << "\033[0m" << " | Stock : " << pile.second.size()
+                          << "\033[0m" << std::endl;
+         }
 
         i++;
     }

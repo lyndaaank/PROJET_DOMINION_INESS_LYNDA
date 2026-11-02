@@ -71,7 +71,7 @@ int Partie::verifSaisieNumero(){
 
     while(true){
 
-        if(!std::getline(std::cin >> std::ws, ligne)){ //ignore les espaces blancs avant le texte qu'on va lire
+        if(!std::getline(std::cin >> std::ws, ligne)){
             throw std::runtime_error("Erreur de lecture du clavier.");
         }
 
@@ -322,7 +322,9 @@ void Partie::jouer(){
     }
 
     ajouterHistorique("Fin de partie : condition de fin atteinte dans la reserve.");
+
     determinerGagnant();
+
     int score0 = m_joueurs[0].calculerScore();
     int score1 = m_joueurs[1].calculerScore();
     if(score0 > score1 || (score0 == score1 && m_joueurs[0].getNombreTours() < m_joueurs[1].getNombreTours()))
