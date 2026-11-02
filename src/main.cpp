@@ -23,11 +23,11 @@ int main()
         partie.initialiser();
         partie.jouer();
     }
-        catch(const std::exception& r) {
-            std::cerr << "Erreur : "<<e.what() <<std::endl;
-            return 1;
+    catch(const std::exception& e) {
+        std::cerr << "Erreur : "<<e.what() <<std::endl;
+        return 1;
 
-        }
+     }
 
 
     return 0;
