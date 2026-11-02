@@ -72,8 +72,7 @@ int Partie::verifSaisieNumero(){
     while(true){
 
         if(!std::getline(std::cin >> std::ws, ligne)){ //std::ws c lespace apres ce qu'on a saisi seul difference avec ta methode
-            std::cout << "Erreur de lecture." << std::endl;
-            return -1;
+            throw std::runtime_error("Erreur de lecture du clavier.");
         }
 
         std::stringstream lecture(ligne);
